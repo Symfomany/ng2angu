@@ -1,0 +1,29 @@
+<div class="section card col s12">
+    <div class="content">
+        <div class="col s3">
+            <img src="{{ item.photo }}" class="responsive-img" alt="">
+        </div>
+        <div class="col s9">
+            <div class="action">
+                <button class="waves-effect waves-light btn">Voir le profile</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col s12 m8 offset-m2 l6 offset-l3">
+    <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+            <div class="col s2">
+                <img src="{{ item.photo }}" alt="" class="circle responsive-img">
+                <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+                <span class="black-text">
+            <h4 class="title">{{ item.pseudo }} <span>{{ item.activite }}</span></h4>
+                This is a square image. Add the "circle" class to it to make it appear circular.
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

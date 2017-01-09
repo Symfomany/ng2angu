@@ -1,0 +1,6 @@
+<form>
+    <input [(ngModel)]="searching" #searchPersonnage type="text" placeholder="rechercher un personnage"> {{ searching }}
+
+    <button type="button" (click)="search(searchPersonnage.value)">Rechercher un personnage</button>
+
+</form>

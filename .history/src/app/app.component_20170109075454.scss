@@ -1,0 +1,35 @@
+nav {
+    height: 0px;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active,
+.tabs .tab a {
+    #009688 !important
+}
+
+.side-nav {
+    width: 200px;
+}
+
+li.active {
+    background-color: #ee6e73
+}
+
+app-filter {
+    margin: 10px;
+}
+
+app-list {
+    margin: 20px;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.center-btn {
+    text-align: center
+}

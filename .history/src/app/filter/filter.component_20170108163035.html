@@ -1,0 +1,31 @@
+<a (click)="visibility()" class="btn-floating btn-large waves-effect waves-light teal animated bounceIn filter">
+    <i class="material-icons">settings</i>
+</a>
+
+<div *ngIf="visible" class="filterForm row">
+
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s12 m12 l4">
+                <input #name pattern="^.{3,}$" (keyup)="searching({name: name.value })" id="search" type="text" placeholder="Nom, Prénom, Pseudo, Activité..." />
+            </div>
+
+            <div class="input-field col s6 m6 l2">
+                <input class="with-gap" name="group3" (click)="searching({sexe: true })" type="radio" id="homme" value="true" />
+                <label for="homme">Homme</label>
+                <input (click)="searching({sexe: false })" class="with-gap" name="group3" type="radio" id="femme" value="false" />
+                <label for="femme">Femme</label>
+            </div>
+            <div class="input-field col s6 m12 l3 range-field">
+                <input #note (change)="searching({note: note.value })" type="range" id="note" min="1" max="5" />
+            </div>
+            <div class="input-field col s12 m12 l3 ">
+                <select #pays (change)="searching({pays: pays.value })" required name="pays" materialize="material_select" [materializeSelectOptions]="personnage.selectOptions">
+                                  <option value="">Filtrer par état</option>
+                                <option *ngFor="let option of personnage.selectOptions" [value]="option">{{option}}</option>
+                            </select>
+            </div>
+
+        </div>
+    </form>
+</div>

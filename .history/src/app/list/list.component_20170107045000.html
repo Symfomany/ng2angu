@@ -1,0 +1,144 @@
+<!-- Page preloader -->
+<!--<div id="hola">
+    <div id="preloader">
+        <span></span>
+        <span></span>
+    </div>
+</div>-->
+
+
+
+<div class="home">
+    <div class="col s12 l9" id="liste">
+        <div *ngIf="!personnage.isLoaded" class="progress">
+            <div class="indeterminate"></div>
+        </div>
+
+
+        <div *ngIf="personnage.isLoaded">
+
+            <a (click)="visibility()" class="btn-floating btn-large waves-effect waves-light teal animated bounceIn filter">
+                <i class="material-icons">settings</i>
+            </a>
+
+            <div *ngIf="visible" class="filterForm row">
+                <form class="col s12">
+                    <div class="row">
+
+                        <div class="input-field col s12 m12 l4">
+                            <input id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">First Name</label>
+                        </div>
+                        <div class="input-field col s12 m12 l2">
+                            <input class="with-gap" name="group3" type="radio" id="homme" checked />
+                            <label for="homme">Homme</label>
+                            <input class="with-gap" name="group3" type="radio" id="femme" checked />
+                            <label for="femme">Femme</label>
+                        </div>
+                        <div class="input-field col s12 m12 l3 range-field">
+                            <input type="range" id="test5" min="0" max="100" />
+                        </div>
+                        <div class="input-field col s12 m12 l3 range-field">
+                            <div class="switch">
+                                <label>
+                                    Vivant
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                    Mort
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card">
+                <ul class="collection">
+                    <app-card [personnages]="personnage.all()"></app-card>
+                </ul>
+            </div>
+
+            <a (click)="personnage.more()" class="more text-center animated fadeInDown"><i class="material-icons dp48">replay</i> Voir les anciens</a>
+
+        </div>
+    </div>
+
+    <a href="#modal1" class="btn-floating btn-large waves-effect waves-light teal add">
+        <i class="material-icons">add</i>
+    </a>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col l4 s12">
+                            <input class="with-gap" name="sexe" type="radio" value="1" id="test5" checked />
+                            <label for="test5">Homme</label>
+                            <input class="with-gap" name="sexe" value="0" type="radio" id="test5" />
+                            <label for="test5">Femme</label>
+                        </div>
+                        <div class="input-field col l4 m6 s12">
+                            <input placeholder="Son role dans la série" id="activite" type="text" class="validate">
+                        </div>
+                        <div class="input-field col l4 m6 s12">
+                            <input type="date" id="dob" class="datepicker">
+                            <label for="dob">Date de naissance</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <p>
+                                <input class="with-gap" name="group3" type="radio" id="one" />
+                                <label for="one">1</label>
+                                <input class="with-gap" name="group3" type="radio" id="two" />
+                                <label for="two">2</label>
+                                <input class="with-gap" name="group3" type="radio" id="three" checked />
+                                <label for="three">3</label>
+                                <input class="with-gap" name="group3" type="radio" id="four" />
+                                <label for="four">4</label>
+                                <input class="with-gap" name="group3" type="radio" id="five" />
+                                <label for="five">5</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choisie un pays</option>
+                                    <option value="1">Californie</option>
+                                    <option value="2">Floride</option>
+                                    <option value="3">Texas</option>
+                                    <option value="3">Pennsylvanie</option>
+                                    <option value="3">Georgie</option>
+                                    <option value="3">Minnesota</option>
+                                    <option value="3">Michigan</option>
+                                    <option value="3">New Jersey</option>
+                                    <option value="3">Illinois</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="Photo http:// " id="activite" type="text " class="validate ">
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="input-field col s12 ">
+                            <i class="material-icons prefix ">mode_edit</i>
+                            <textarea id="icon_prefix2 " class="materialize-textarea "></textarea>
+                            <label for="icon_prefix2 ">Biograpgie</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="modal-footer ">
+            <button class="modal-action modal-close waves-effect waves-green teal ">Créer ce personnage</button>
+        </div>
+    </div>
+
+
+
+</div>

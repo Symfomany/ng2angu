@@ -1,0 +1,8 @@
+<form>
+    <input name="searching" [(ngModel)]="searching" type="text" placeholder="rechercher un personnage" /> {{ searching }}
+    <p *ngIf="searching.length > 3">
+        Le titre doi faire plus de 3 caractères
+    </p>
+    <button type="button" (click)="search(searching)">Rechercher un personnage</button>
+
+</form>

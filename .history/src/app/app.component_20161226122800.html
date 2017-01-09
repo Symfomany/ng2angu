@@ -1,0 +1,4 @@
+<h3>{{ personnage.title }}</h3>
+<p>{{ nb }} personnages</p>
+<app-filter></app-filter>
+<app-list (nbPersonnages)="nbPersonnages($event)" [personnages]="personnages"></app-list>

@@ -1,0 +1,11 @@
+:host {
+    margin: 5px;
+}
+
+app-filter {
+    margin: 10px;
+}
+
+app-list {
+    margin: 20px;
+}

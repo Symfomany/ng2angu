@@ -1,0 +1,4 @@
+<md-grid-list cols="4" [style.background]="'lightblue'">
+    <app-card *ngFor="let item of personnages | async" [item]="item"></app-card>
+</md-grid-list>
+<h3>Liste</h3>

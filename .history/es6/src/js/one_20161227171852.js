@@ -1,0 +1,1 @@
+export let alpha = 123;

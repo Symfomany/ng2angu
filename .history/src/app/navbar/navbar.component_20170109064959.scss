@@ -1,0 +1,12 @@
+nav {
+    box-shadow: none;
+    .brand-logo {
+        background-image: url('./assets/photos/logo_walkin.png');
+        width: 55px;
+        height: 55px;
+    }
+}
+
+// @media #{$medium-and-down} {
+//     nav .brand-logo {}
+// }

@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.modal.bottom-sheet {
+    max-height: 60%;
+}
+
+div#liste {
+    margin: 0 auto;
+    width: 80%;
+    float: none;
+}
+
+.collection {
+    border: none;
+    border-radius: none;
+}
+
+.material-icons.note {
+    color: burlywood;
+    font-size: 17px;
+}
+
+.collection .collection-item {}
+
+.collection .collection-item.avatar {
+    min-height: auto;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    border: none;
+    padding-left: 83px;
+    /* exactly three lines */
+}
+
+.collection .collection-item.avatar .circle {
+    max-width: 55px;
+    max-height: 55px;
+    top: 14px;
+}
+
+.collection .separator {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.collection .collection-item.avatar:after {
+    content: "";
+    /*text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 1.2em;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);*/
+}
+
+.collection .collection-item.avatar p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.btn-floating.btn-large.add {
+    position: fixed;
+    right: 35px;
+    bottom: 55px;
+}
+
+div#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center;
+}

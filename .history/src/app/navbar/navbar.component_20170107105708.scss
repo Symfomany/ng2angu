@@ -1,0 +1,14 @@
+nav {
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 992px) {
+    nav .brand-logo {
+        left: 20%;
+        font-size: 1.5rem;
+    }
+}
+
+// @media #{$medium-and-down} {
+//     nav .brand-logo {}
+// }

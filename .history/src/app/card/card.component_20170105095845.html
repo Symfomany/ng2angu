@@ -1,0 +1,26 @@
+<div *ngFor="let item of personnages | async; let i = index">
+    <li class="collection-item avatar">
+        <img src="{{ item.photo }}" alt="" class="circle responsive-img">
+        <span class="title">
+            {{ item.pseudo }}
+            {{ item.note|number }}
+            <!--<i style="color: burlywood;font-size: 17px;"  *ngFor="let item of item.note|number" class="note material-icons dp48">grade</i>-->
+        </span>
+        <div class="right">
+            <a class="btn-floating blue">
+                <i class="material-icons dp48">mode_edit</i>
+            </a>
+            <a (click)="remove(item)" class="btn-floating red">
+                <i class="material-icons dp48">delete</i></a>
+        </div>
+        <p>
+            <strong>
+                 {{ item.activite }}
+            </strong>
+        </p>
+        <p>
+            {{ item.resume|truncate:160 }}
+        </p>
+    </li>
+    <li class="separator"></li>
+</div>

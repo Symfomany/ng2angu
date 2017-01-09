@@ -1,0 +1,14 @@
+nav {
+    box-shadow: none;
+    .brand-logo {
+        background-image: url("./assets/photos/logo_walkin.png");
+        width: 65px;
+        height: 49px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+// @media #{$medium-and-down} {
+//     nav .brand-logo {}
+// }

@@ -1,0 +1,25 @@
+.btn-floating.red {}
+
+button.teal-text,
+button.red-text,
+{
+    font-size: 16px;
+    vertical-align: middle;
+    display: flex;
+    margin-right: 20px;
+    float: left;
+    -webkit-transition: color .6s ease-in;
+    -moz-transition: color .6s ease-in;
+    -o-transition: color .6s ease-in;
+    transition: color .6s ease-in;
+    cursor: pointer;
+    padding: 5px;
+}
+
+a.teal-text:active,
+a.red-text:active,
+{}
+
+div#actions {
+    margin-top: 5px;
+}

@@ -1,0 +1,18 @@
+<!--<p *ngIf="spoil" class="alert alert-success"><strong>C'est le chef du groupe!</strong></p>-->
+<app-navbar (openSide)="openSide($event)"></app-navbar>
+<app-sidebar [open]="open"></app-sidebar>
+
+
+<div class="row">
+    <div class="col s12">
+        <ul class="tabs">
+            <li class="tab col s3"><a routerLinkActive="active" routerLink="/main"><i class="material-icons">view_list</i></a></li>
+            <li class="tab col s3"><a routerLink="/map" routerLinkActive="active"><i class="material-icons">map</i></a></li>
+        </ul>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<!--
+<p *ngIf="spoil" class="alert alert-success"><strong>C'est le chef du groupe!</strong></p>
+<app-filter [spoil]="spoil" (update)="detect($event)"></app-filter>
+<app-list [personnages]="personnage.all"></app-list>-->

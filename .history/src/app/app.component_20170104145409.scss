@@ -1,0 +1,20 @@
+.transition(@duration, @ease) {
+    -webkit-transition: all @duration @ease;
+    -moz-transition: all @duration @ease;
+    -o-transition: all @duration @ease;
+    transition: all @duration @ease;
+}
+
+app-filter {
+    margin: 10px;
+}
+
+app-list {
+    margin: 20px;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}

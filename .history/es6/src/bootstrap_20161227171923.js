@@ -1,0 +1,6 @@
+"use strict";
+
+import { alpha } from "js/one";
+
+
+alert(alpha);

@@ -1,0 +1,15 @@
+<div [@flyInOut]="'in'" *ngFor="let item of personnages; let i = index">
+    <li class="collection-item avatar">
+        <img src="{{ item.photo }}" alt="" class="circle responsive-img">
+        <span class="title">{{ item.pseudo }}</span>
+        <div class="right">
+            <a class="btn-floating blue">
+                <i class="material-icons dp48">mode_edit</i>
+            </a>
+            <a (click)="remove(item)" class="btn-floating red">
+                <i class="material-icons dp48">delete</i></a>
+        </div>
+        <p> {{ item.resume|truncate:160 }}</p>
+    </li>
+    <li class="separator"></li>
+</div>

@@ -1,0 +1,21 @@
+<!--<p *ngIf="spoil" class="alert alert-success"><strong>C'est le chef du groupe!</strong></p>-->
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col  l12">
+        <app-sidebar></app-sidebar>
+        <div class="center-btn">
+            <a class="waves-effect waves-light btn">
+                <i class="material-icons">view_list</i>
+            </a>
+            <a class="waves-effect waves-light btn">
+                <i class="material-icons">map</i>
+            </a>
+        </div>
+
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<!--
+<p *ngIf="spoil" class="alert alert-success"><strong>C'est le chef du groupe!</strong></p>
+<app-filter [spoil]="spoil" (update)="detect($event)"></app-filter>
+<app-list [personnages]="personnage.all"></app-list>-->

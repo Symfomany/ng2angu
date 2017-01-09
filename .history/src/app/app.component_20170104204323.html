@@ -1,0 +1,12 @@
+<!--<p *ngIf="spoil" class="alert alert-success"><strong>C'est le chef du groupe!</strong></p>-->
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col  l12">
+        <app-sidebar></app-sidebar>
+        <app-list [more]="personnage.more()" [personnages]="personnage.all()"></app-list>
+    </div>
+</div>
+<!--
+<p *ngIf="spoil" class="alert alert-success"><strong>C'est le chef du groupe!</strong></p>
+<app-filter [spoil]="spoil" (update)="detect($event)"></app-filter>
+<app-list [personnages]="personnage.all"></app-list>-->

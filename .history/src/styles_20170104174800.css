@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+body {
+    font-family: Roboto, sans-serif;
+}
+
+div#liste {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.collection {
+    border: none;
+    border-radius: none;
+}
+
+.collection .collection-item.avatar {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    position: relative;
+    height: 3.6em;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    border: none;
+    /* exactly three lines */
+}
+
+.collection .separator {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.collection .collection-item.avatar:after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 1.2em;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+}
+
+.collection .collection-item.avatar p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.btn-floating.btn-large.add {
+    position: fixed;
+    right: 35px;
+    bottom: 55px;
+}

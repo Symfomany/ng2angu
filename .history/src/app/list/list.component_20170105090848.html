@@ -1,0 +1,60 @@
+<!-- Page preloader -->
+<!--<div id="hola">
+    <div id="preloader">
+        <span></span>
+        <span></span>
+    </div>
+</div>-->
+
+
+
+<div class="home">
+    <div class="col s9" id="liste">
+        <div *ngIf="!personnage.isLoaded" class="progress">
+            <div class="indeterminate"></div>
+        </div>
+
+
+
+
+        <div *ngIf="personnage.isLoaded">
+
+            <a class="btn-floating btn-large waves-effect waves-light teal animated bounceIn filter">
+                <i class="material-icons">settings</i>
+            </a>
+
+            <div class="filterForm row ">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">First Name</label>
+                        </div>
+                        <div class="input-field col s2">
+                            <input class="with-gap" name="group3" type="radio" id="homme" checked />
+                            <label for="homme">Homme</label>
+                            <input class="with-gap" name="group3" type="radio" id="femme" checked />
+                            <label for="femme">Femme</label>
+                        </div>
+                        <div class="input-field col s4 range-field">
+                            <input type="range" id="test5" min="0" max="100" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card">
+                <ul class="collection">
+                    <app-card [personnages]="personnage.all()"></app-card>
+                </ul>
+            </div>
+
+            <a (click)="personnage.more()" class="more text-center animated fadeInDown"><i class="material-icons dp48">replay</i> Voir les anciens</a>
+
+        </div>
+    </div>
+
+    <a class="btn-floating btn-large waves-effect waves-light red add button-collapse"><i class="material-icons">add</i></a>
+
+
+</div>

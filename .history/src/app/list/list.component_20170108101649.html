@@ -1,0 +1,28 @@
+<div *ngIf="!personnage.isLoaded" class="progress" id="loaderpersonnages">
+    <div class="indeterminate"></div>
+</div>
+
+<div class="home">
+
+    <div class="col s12" id="liste">
+
+        <div *ngIf="personnage.isLoaded">
+
+            <app-filter [(search)]="searching($event)"></app-filter>
+
+            <div class="card">
+                <ul class="collection">
+                    <app-card [text]="search" [personnages]="personnage.all()"></app-card>
+                </ul>
+            </div>
+
+            <!--<a (click)="personnage.more()" class="more text-center animated fadeInDown"><i class="material-icons dp48">replay</i> Voir les anciens</a>-->
+
+        </div>
+    </div>
+
+
+
+    <app-form></app-form>
+
+</div>

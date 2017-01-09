@@ -1,0 +1,7 @@
+.cards-container {
+    column-break-inside: avoid;
+    .card {
+        display: inline-block;
+        overflow: visible;
+    }
+}

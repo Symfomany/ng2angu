@@ -1,0 +1,19 @@
+<!-- Page preloader -->
+<div id="hola">
+    <div id="preloader">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<div class="col s9" id="liste">
+    <a (click)="personnage.more()" class="more text-center"><i class="material-icons dp48">replay</i> Voir les anciens</a>
+
+    <div class="card">
+        <ul class="collection">
+            <app-card [personnages]="personnage.all()"></app-card>
+        </ul>
+    </div>
+</div>
+
+<a class="btn-floating btn-large waves-effect waves-light red add"><i class="material-icons">add</i></a>

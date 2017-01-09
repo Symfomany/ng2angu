@@ -1,0 +1,40 @@
+<!-- Page preloader -->
+<!--<div id="hola">
+    <div id="preloader">
+        <span></span>
+        <span></span>
+    </div>
+</div>-->
+
+
+
+<div class="home">
+    <div class="col s9" id="liste">
+        <div *ngIf="!personnage.isLoaded" class="progress">
+            <div class="indeterminate"></div>
+        </div>
+
+        <div class="filterForm">
+
+        </div>
+        <div *ngIf="personnage.isLoaded">
+
+            <a class="btn-floating btn-large waves-effect waves-light teal animated bounceIn filter">
+                <i class="material-icons">settings</i>
+            </a>
+
+            <div class="card">
+                <ul class="collection">
+                    <app-card [personnages]="personnage.all()"></app-card>
+                </ul>
+            </div>
+
+            <a (click)="personnage.more()" class="more text-center animated fadeInDown"><i class="material-icons dp48">replay</i> Voir les anciens</a>
+
+        </div>
+    </div>
+
+    <a class="btn-floating btn-large waves-effect waves-light red add button-collapse"><i class="material-icons">add</i></a>
+
+
+</div>

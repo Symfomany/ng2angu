@@ -1,0 +1,46 @@
+nav {
+    box-shadow: none;
+    .brand-logo {
+        font-size: 1.5rem;
+        padding-left: 23px;
+    }
+    .machine {
+        width: 10vmin;
+        fill: #fff;
+    }
+    .small-shadow,
+    .medium-shadow,
+    .large-shadow {
+        fill: rgba(0, 0, 0, 0.05);
+    }
+    .small {
+        -webkit-transform-origin: 100.136px 225.345px;
+        -ms-transform-origin: 100.136px 225.345px;
+        transform-origin: 100.136px 225.345px;
+    }
+    .small-shadow {
+        -webkit-transform-origin: 110.136px 235.345px;
+        -ms-transform-origin: 110.136px 235.345px;
+        transform-origin: 110.136px 235.345px;
+    }
+    .medium {
+        -webkit-transform-origin: 254.675px 379.447px;
+        -ms-transform-origin: 254.675px 379.447px;
+        transform-origin: 254.675px 379.447px;
+    }
+    .medium-shadow {
+        -webkit-transform-origin: 264.675px 389.447px;
+        -ms-transform-origin: 264.675px 389.447px;
+        transform-origin: 264.675px 389.447px;
+    }
+    .large {
+        -webkit-transform-origin: 461.37px 173.694px;
+        -ms-transform-origin: 461.37px 173.694px;
+        transform-origin: 461.37px 173.694px;
+    }
+    .large-shadow {
+        -webkit-transform-origin: 471.37px 183.694px;
+        -ms-transform-origin: 471.37px 183.694px;
+        transform-origin: 471.37px 183.694px;
+    }
+}

@@ -1,0 +1,36 @@
+<div *ngFor="let item of personnages | async | filter:datasFilter; let i = index">
+    <li class="collection-item avatar">
+
+        <a><img src="./assets/photos/{{ item.photo }}" alt="" class="circle responsive-img"></a>
+
+        <span class="title">
+            <a>{{ item.pseudo }}</a> 
+            <!--{{ item.note|number }}-->
+            <span [innerHTML]="item.note|number"></span>
+        <!--<i style="color: burlywood;font-size: 17px;"  *ngFor="let item of item.note|number" class="note material-icons dp48">grade</i>-->
+        </span>
+        <div class="right">
+            <a (click)="remove(item)" class="btn-floating red">
+                <i class="material-icons dp48">delete</i></a>
+        </div>
+        <p>
+            <strong>
+                {{ item.activite }} 
+            </strong>
+
+        </p>
+        <p>
+            {{ item.resume|truncate:160 }}
+        </p>
+        <i class="center">
+            Mise à hour {{ item.created | ago }} 
+        </i>
+        <div id="actions">
+            <button (click)="plus(item)" class="waves-effect waves-light btn"><i class="material-icons">thumb_up</i>{{ item.like }}</button>
+            <button (click)="moins(item)" class="waves-effect waves-light btn red"><i class="material-icons">thumb_down</i>{{ item.dislike }}</button>
+        </div>
+
+
+    </li>
+    <li class="separator"></li>
+</div>

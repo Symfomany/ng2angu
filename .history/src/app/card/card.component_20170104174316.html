@@ -1,0 +1,8 @@
+<li class="collection-item avatar" *ngFor="let item of personnages | async">
+    <img src="{{ item.photo }}" alt="" class="circle responsive-img">
+    <span class="title">{{ item.pseudo }}</span>
+    <span class="right"><i class="material-icons dp48">mode_edit</i></span>
+    <p> {{ item.resume }}</p>
+
+    <div class="separator"></div>
+</li>

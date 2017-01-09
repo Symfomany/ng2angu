@@ -1,0 +1,124 @@
+<!-- Page preloader -->
+<!--<div id="hola">
+    <div id="preloader">
+        <span></span>
+        <span></span>
+    </div>
+</div>-->
+
+
+
+<div class="home">
+    <div class="col s9" id="liste">
+        <div *ngIf="!personnage.isLoaded" class="progress">
+            <div class="indeterminate"></div>
+        </div>
+
+
+        <div *ngIf="personnage.isLoaded">
+
+            <a (click)="visibility()" class="btn-floating btn-large waves-effect waves-light teal animated bounceIn filter">
+                <i class="material-icons">settings</i>
+            </a>
+
+            <div *ngIf="visible" class="filterForm row">
+                <form class="col s12">
+                    <div class="row">
+
+                        <div class="input-field col s12 m12 l4">
+                            <input id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">First Name</label>
+                        </div>
+                        <div class="input-field col s12 m12 l2">
+                            <input class="with-gap" name="group3" type="radio" id="homme" checked />
+                            <label for="homme">Homme</label>
+                            <input class="with-gap" name="group3" type="radio" id="femme" checked />
+                            <label for="femme">Femme</label>
+                        </div>
+                        <div class="input-field col s12 m12 l3 range-field">
+                            <input type="range" id="test5" min="0" max="100" />
+                        </div>
+                        <div class="input-field col s12 m12 l3 range-field">
+                            <div class="switch">
+                                <label>
+                                    Vivant
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                    Mort
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card">
+                <ul class="collection">
+                    <app-card [personnages]="personnage.all()"></app-card>
+                </ul>
+            </div>
+
+            <a (click)="personnage.more()" class="more text-center animated fadeInDown"><i class="material-icons dp48">replay</i> Voir les anciens</a>
+
+        </div>
+    </div>
+
+    <a href="#modal1" class="btn-floating btn-large waves-effect waves-light red add">
+        <i class="material-icons">add</i>
+    </a>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal  bottom-sheet">
+        <div class="modal-content">
+            <h4><i class="material-icons">add</i> Ajouter un personnage</h4>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="Son role dans la série" id="first_name" type="text" class="validate">
+                            <label for="first_name">Activité</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last  <input type=" date " class="datepicker ">
+_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                            <label for="disabled">Disabled</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            This is an inline input field:
+                            <div class="input-field inline">
+                                <input id="email" type="email" class="validate">
+                                <label for="email" data-error="wrong" data-success="right">Email</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button class="modal-action modal-close waves-effect waves-green teal">Créer ce personnage</button>
+        </div>
+    </div>
+
+
+
+</div>

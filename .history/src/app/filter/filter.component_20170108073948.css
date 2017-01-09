@@ -1,0 +1,35 @@
+a.filter {
+    margin: 0 auto;
+    display: block;
+    bottom: 42px;
+}
+
+a.filter i {
+    ransition: all 1s ease-in-out 0s;
+}
+
+a.filter i:active {
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 1s ease-in-out 0s;
+}
+
+ :host {
+    display: flex;
+    flex-direction: column;
+}
+
+input:focus {
+    font-weight: bold;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+    border-left: 5px solid #42A948;
+    /* green */
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442;
+    /* red */
+}

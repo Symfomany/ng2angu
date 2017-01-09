@@ -1,0 +1,8 @@
+<form novalidate name="persoCtrl">
+
+    <input class="form-control" required pattern="^[a-zA-Z\-\ ]{3,100}$" (keyup)="update.emit({text: searching})" name="searching" [(ngModel)]="searching" #search="ngModel" type="text " placeholder="rechercher un personnage " />
+    <div [hidden]="search.valid || search.pristine || search.length < 3" class="error"> Le titre doit faire plus de 3 caractères
+    </div>
+    <button class="btn btn-primary" type="button" (click)="search(searching)">Rechercher un personnage</button>
+
+</form>

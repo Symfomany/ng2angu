@@ -1,0 +1,28 @@
+a.more {
+    display: block;
+    text-align: center;
+}
+
+a.filter {
+    margin: 0 auto;
+    display: block;
+    bottom: 42px;
+    transition: all 2s;
+}
+
+a.filter:hover {
+    transform: rotate(1080deg);
+}
+
+.collection {
+    .collection-item {}
+}
+
+.modal {
+    max-height: 90%;
+    width: 75%;
+}
+
+div#liste {
+    width: 90%;
+}

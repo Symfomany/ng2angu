@@ -1,0 +1,65 @@
+<a (click)="openModal()" class="modal-trigger btn-floating btn-large waves-effect waves-light teal add">
+    <i class="material-icons">add</i>
+</a>
+
+<div materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions" class="modal">
+    <form (ngSubmit)="send($event, personnageForm.value)" novalidate #personnageForm="ngForm">
+        <div class="modal-content">
+            <div class="row">
+                <div class="input-field col l4 s12">
+                    <input [(ngModel)]="personnage.sexe" class="with-gap" name="sexe" type="radio" value="1" id="femme" checked />
+                    <label for="femme">Homme</label>
+                    <input [(ngModel)]="personnage.sexe" class="with-gap" name="sexe" value="0" type="radio" id="homme" />
+                    <label for="homme">Femme</label>
+                </div>
+                <div class="input-field col l4 m6 s12">
+                    <input required placeholder="Son nom dans la série" name="pseudo" type="text" [(ngModel)]="personnage.pseudo" pattern=".{3,}" #pseudo="ngModel">
+                    <span [hidden]="pseudo.valid || pseudo.pristine" class="red-text">Nom est invalide</span>
+                </div>
+                <div class="input-field col l4 m6 s12">
+                    <input required placeholder="Son role dans la série" name="activite" type="text" [(ngModel)]="personnage.activite" pattern=".{3,}" #activite="ngModel">
+                    <span [hidden]="activite.valid || activite.pristine" class="red-text">Activité est invalide</span>
+                </div>
+
+                <div class="input-field col l4 m6 s12">
+                    <input name="naissance" materialize="pickadate" [(ngModel)]="personnage.naissance" type="text" id="naissance" class="datepicker">
+                    <label for="dob">Date de naissance</label>
+                </div>
+                <div class="col s12">
+                    <input [(ngModel)]="personnage.note" class="with-gap" name="note" type="radio" id="one" value="1" />
+                    <label for="one">1</label>
+                    <input [(ngModel)]="personnage.note" class="with-gap" name="note" type="radio" id="two" value="2" />
+                    <label for="two">2</label>
+                    <input [(ngModel)]="personnage.note" class="with-gap" name="note" type="radio" id="three" value="3" />
+                    <label for="three">3</label>
+                    <input [(ngModel)]="personnage.note" class="with-gap" name="note" type="radio" id="four" value="4" />
+                    <label for="four">4</label>
+                    <input [(ngModel)]="personnage.note" class="with-gap" name="note" type="radio" id="five" value="5" />
+                    <label for="five">5</label>
+                </div>
+                <div class="input-field col s12">
+                    <select name="pays" [(ngModel)]="personnage.pays" materialize="material_select" [materializeSelectOptions]="selectOptions">
+                    <option *ngFor="let option of selectOptions" [value]="option">{{option}}</option>
+                </select>
+                </div>
+                <div class="input-field col s12">
+                    <input [(ngModel)]="personnage.photo" #photo="ngModel" name="photo" placeholder="Photo au format http://" id="photo" type="text">
+                    <span [hidden]="photo.valid || photo.pristine" class="red-text">Photo est invalide (http://)</span>
+                </div>
+                <div class="input-field col s12">
+                    <textarea [(ngModel)]="personnage.resume" id="resume" required min="5" name="resume" class="materialize-textarea" #resume="ngModel"></textarea>
+                    <label for="resume">Biographie</label>
+                    <span [hidden]="resume.valid || resume.pristine" class="red-text">Photo est invalide (http://)</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button [disabled]="!personnageForm.valid"> type="submit" class="waves-effect btn waves-light">
+                <i class="material-icons">done</i> Créer ce personnage
+                </button>
+        </div>
+
+    </form>
+</div>

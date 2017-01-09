@@ -1,0 +1,5 @@
+<h3>{{ personnage.title }}</h3>
+<p>URL: {{ api }} </p>
+<p *ngIf="spoil">C'est un le chef du grouype!</p>
+<app-filter (update)="detect($event)"></app-filter>
+<app-list [personnages]="personnage.all"></app-list>

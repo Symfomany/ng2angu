@@ -1,0 +1,28 @@
+{
+    "extends": [
+        "kentcdodds/es6/best-practices",
+        "kentcdodds/best-practices",
+        "kentcdodds/es6/possible-errors",
+        "kentcdodds/possible-errors",
+    ],
+    "rules": {
+        // these are only here because I did not
+        // want to update the entire codebase ¯\_(ツ)_/¯
+        "func-names": 0,
+        "no-var": 0,
+        "no-console": 1,
+        "func-style": 0,
+        "comma-dangle": 0,
+        "valid-jsdoc": 0,
+        "vars-on-top": 0,
+        "complexity": [2, 6],
+        "prefer-template": 0,
+    },
+    "globals": {
+        "jasmine": false,
+        "describe": false,
+        "it": false,
+        "beforeEach": false,
+        "expect": false,
+    }
+}

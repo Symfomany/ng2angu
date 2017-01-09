@@ -1,0 +1,44 @@
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'filter'
+})
+export class FilterPipe implements PipeTransform {
+
+  public transform(value: any, datasFilter: any = {}): any {
+    console.log(datasFilter);
+    if (!datasFilter || Object.keys(datasFilter).length === 0
+      || datasFilter.name.length < 3 || datasFilter.pays == "") {
+      return value;
+    }
+
+    if (datasFilter.hasOwnProperty('name')) {
+      let regEx = new RegExp(`${datasFilter.name}`, 'i');
+      value = value.filter(el => {
+        return regEx.test(el.pseudo) || regEx.test(el.activite);
+      });
+    }
+
+    if (datasFilter.hasOwnProperty('note')) {
+      value = value.filter(el => {
+        return el.note >= parseInt(datasFilter.note);
+      })
+    }
+    if (datasFilter.hasOwnProperty('pays') && datasFilter.pays != "") {
+      console.log(datasFilter.pays);
+      value = value.filter(el => {
+        return el.pays.toLowerCase() == datasFilter.pays.toLowerCase()
+      })
+    }
+
+    if (datasFilter.hasOwnProperty('sexe')) {
+      value = value.filter(el => {
+        return el.sexe == datasFilter.sexe;
+      })
+    }
+
+    return value;
+
+  }
+
+}

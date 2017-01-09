@@ -1,0 +1,33 @@
+        a.more {
+            display: block;
+            text-align: center;
+        }
+        
+        a.filter {
+            margin: 0 auto;
+            display: block;
+            bottom: 42px;
+            transition: all 2s;
+        }
+        
+        a.filter:hover {
+            transform: rotate(1080deg);
+        }
+        
+        .collection {
+            .collection-item {}
+        }
+        
+        div#liste {
+            width: 90%;
+            padding: 0;
+        }
+        
+        #loaderpersonnages {}
+        
+        div#actions {
+            width: 150px;
+            margin: 0 auto;
+            height: 24px;
+            margin-top: 14px;
+        }

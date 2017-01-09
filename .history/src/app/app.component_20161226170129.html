@@ -1,0 +1,4 @@
+<h3>{{ personnage.title }}</h3>
+<p *ngIf="spoil" class="alert alert-success"><strong>C'est le chef du groupe!</strong></p>
+<app-filter (update)="detect($event)"></app-filter>
+<app-list [personnages]="personnage.all"></app-list>

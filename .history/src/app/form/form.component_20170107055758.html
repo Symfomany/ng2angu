@@ -1,0 +1,56 @@
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <form (ngSubmit)="send()">
+            <div class="input-field col l4 s12">
+                <input class="with-gap" name="sexe" type="radio" value="1" id="femme" checked />
+                <label for="femme">Homme</label>
+                <input class="with-gap" name="sexe" value="0" type="radio" id="homme" />
+                <label for="homme">Femme</label>
+            </div>
+            <div class="input-field col l4 m6 s12">
+                <input required placeholder="Son role dans la série" id="activite" type="text" #name="activite" class="validate">
+                <span [hidden]="activite.valid" class="text-danger">Vous devez entrer un nom !</span>
+            </div>
+            <div class="input-field col l4 m6 s12">
+                <input required name="dob" type="date" id="dob" class="datepicker">
+                <label for="dob">Date de naissance</label>
+            </div>
+            <div class="col s12">
+                <input required class="with-gap" name="note" type="radio" id="one" />
+                <label for="one">1</label>
+                <input required class="with-gap" name="note" type="radio" id="two" />
+                <label for="two">2</label>
+                <input required class="with-gap" name="note" type="radio" id="three" checked />
+                <label for="three">3</label>
+                <input required class="with-gap" name="note" type="radio" id="four" />
+                <label for="four">4</label>
+                <input required class="with-gap" name="note" type="radio" id="five" />
+                <label for="five">5</label>
+            </div>
+            <div class="input-field col s12">
+                <select name="nationnalite" required>
+                        <option value="" disabled selected>Choisir un pays</option>
+                        <option value="Californie">Californie</option>
+                        <option value="Floride">Floride</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Pennsylvanie">Pennsylvanie</option>
+                        <option value="Georgie">Georgie</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="Illinois">Illinois</option>
+                    </select>
+            </div>
+            <div class="input-field col s12">
+                <input name="photo" placeholder="Photo au format http://" id="photo" type="url" class="validate">
+            </div>
+            <div class="input-field col s12">
+                <textarea id="biographie" required min="5" name="biographie" class="materialize-textarea"></textarea>
+                <label for="biographie">Biographie</label>
+            </div>
+        </form>
+    </div>
+    <button class="modal-action modal-close waves-effect btn waves-light">
+               <i class="material-icons">done</i> Créer ce personnage</button>
+</div>

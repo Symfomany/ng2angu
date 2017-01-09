@@ -1,0 +1,8 @@
+<form>
+    <input [(ngModel)]="searchPersonnage" #searchPersonnage type="text" placeholder="rechercher un personnage">
+
+    <button type="button" (click)="search(searchPersonnage.value)">Rechercher un personnage</button>
+    <p *ngIf="searchPersonnage.length >= 3">
+        Search for {{ searchPersonnage }}
+    </p>
+</form>
